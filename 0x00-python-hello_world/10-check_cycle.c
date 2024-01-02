@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "lists.h"
 /**
  * check_cycle - checks if a linked list contains a cycle
@@ -7,11 +8,9 @@
 int check_cycle(listint_t *list)
 {
 	listint_t *lag = list;
-	listint_t *speedy = list;
-	
-	if (!list)
-		return (0);
-	while (lag && speedy && speedy->next)
+	listint_t *speedy = list->next;
+
+	while (speedy != NULL && speedy->next != NULL)
 	{
 		lag = lag->next;
 		lag = speedy->next->next;
