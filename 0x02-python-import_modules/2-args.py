@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-impor sys
+import sys
 if __name__ == "__main__":
     length = len(sys.argv) - 1
     if length == 0:
