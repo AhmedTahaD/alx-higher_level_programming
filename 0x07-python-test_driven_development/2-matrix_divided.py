@@ -4,14 +4,10 @@
 
 def matrix_divided(matrix, div):
     """Function to devide all matrix element by div
-    
     Args:
-    
     matrix:list of lists of integers/floats
     div:number(integer/float) matrix devided by it
-
     Raises:
-    
     TypeError: If matrix is not list of lists containing int or float.
     TypeError: If rows are not all same size.
     TypeError: If div is not integer or float.
@@ -38,6 +34,7 @@ def matrix_divided(matrix, div):
                 raise TypeError("matrix must be a matrix (list of lists) " +
                                 "of integers/floats")
     return [[round(element / div, 2) for element in row] for row in matrix]
+
 
 if __name__ == "__main__":
     import doctest
