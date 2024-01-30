@@ -3,7 +3,7 @@
 
 
 def text_indentation(text):
-    """function that prints a text with 2 new lines 
+    """function that prints a text with 2 new lines
     after each of these characters: ., ? and :
 
     Args:
@@ -17,8 +17,8 @@ def text_indentation(text):
         raise TypeError("text must be a string")
 
     for delimeter in ".?:":
-        text = (delimeter + "\n\n").join
-        ([line.strip(" ") for line in text.split(delimeter)])
+        text = (delimeter + "\n\n").join(
+                [line.strip(" ") for line in text.split(delimeter)])
 
     print(text, end="")
 
