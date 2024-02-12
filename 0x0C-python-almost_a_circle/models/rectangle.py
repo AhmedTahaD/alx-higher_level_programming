@@ -78,6 +78,7 @@ class Rectangle(Base):
         return '[{}] ({}) {}/{} - {}/{}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
+
     def update(self, *args, **kwargs):
         """Updates instance attributes via no-keyword & keyword args."""
 
