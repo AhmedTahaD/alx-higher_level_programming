@@ -71,3 +71,4 @@ class Rectangle(Base):
         '''Prints string representation of this rectangle.'''
         s = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
+        print(s, end='')
