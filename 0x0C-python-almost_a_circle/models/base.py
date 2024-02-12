@@ -29,3 +29,10 @@ class Base:
             return "[]"
         else:
             return dumps(list_dictionaries)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """writes the JSON string representation of list_objs to a file"""
+        if json_string is None or not json_string:
+            return []
+        return loads(json_string)
