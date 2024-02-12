@@ -4,6 +4,7 @@ The goal of it is to manage id attribute in all your future classes
 and to avoid duplicating the same code (by extension, same bugs)"""
 
 
+
 class Base:
     """implementation of base of oop hierarchy"""
 
@@ -18,4 +19,4 @@ class Base:
             self.id = id
         else:
             Base.__nb_objects += 1
-            self.id = Base.__nb_object
+            self.id = Base.__nb_objects
