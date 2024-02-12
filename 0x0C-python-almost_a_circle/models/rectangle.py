@@ -16,7 +16,7 @@ class Rectangle(Base):
 
     @property
     def width(self):
-        '''Width of this rectangle.'''
+        """Width of this rectangle."""
         return self.__width
 
     @width.setter
@@ -26,7 +26,7 @@ class Rectangle(Base):
 
     @property
     def height(self):
-        '''Height of this rectangle.'''
+        """Height of this rectangle."""
         return self.__height
 
     @height.setter
@@ -36,7 +36,7 @@ class Rectangle(Base):
 
     @property
     def x(self):
-        '''x of this rectangle.'''
+        """x of this rectangle."""
         return self.__x
 
     @x.setter
@@ -46,7 +46,7 @@ class Rectangle(Base):
 
     @property
     def y(self):
-        '''y of this rectangle.'''
+        """y of this rectangle."""
         return self.__y
 
     @y.setter
@@ -55,7 +55,7 @@ class Rectangle(Base):
         self.__y = value
 
     def validate_integer(self, name, value, eq=True):
-        '''Method for validating the value.'''
+        """Method for validating the value."""
         if type(value) != int:
             raise TypeError("{} must be an integer".format(name))
         if eq and value < 0:
@@ -68,13 +68,20 @@ class Rectangle(Base):
         return self.width * self.height
 
     def display(self):
-        '''Prints string representation of this rectangle.'''
+        """Prints string representation of this rectangle."""
         s = '\n' * self.y + \
             (' ' * self.x + '#' * self.width + '\n') * self.height
         print(s, end='')
 
     def __str__(self):
-        '''Returns string info about this rectangle.'''
+        """Returns string info about this rectangle."""
         return '[{}] ({}) {}/{} - {}/{}'.\
             format(type(self).__name__, self.id, self.x, self.y, self.width,
                    self.height)
+    def update(self, *args, **kwargs):
+        """Updates instance attributes via no-keyword & keyword args."""
+
+        if args:
+            self.__update(*args)
+        elif kwargs:
+            self.__update(**kwargs)
